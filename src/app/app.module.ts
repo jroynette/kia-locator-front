@@ -15,7 +15,7 @@ import {InfoSallePage} from "../pages/infosSalle/infoSalle";
     InfoSallePage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {tabsHideOnSubPages: true})
   ],
   bootstrap: [IonicApp],
   entryComponents: [
