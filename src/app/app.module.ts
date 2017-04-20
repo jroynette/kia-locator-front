@@ -4,7 +4,9 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { MapsPage } from '../pages/maps/maps';
 import {InfoSallePage} from "../pages/infosSalle/infoSalle";
+import {SalleServices} from "../services/salle.service"
 
 @NgModule({
   declarations: [
@@ -12,6 +14,7 @@ import {InfoSallePage} from "../pages/infosSalle/infoSalle";
     AboutPage,
     HomePage,
     TabsPage,
+    MapsPage,
     InfoSallePage
   ],
   imports: [
@@ -23,8 +26,9 @@ import {InfoSallePage} from "../pages/infosSalle/infoSalle";
     AboutPage,
     HomePage,
     TabsPage,
-    InfoSallePage
+    InfoSallePage,
+    MapsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, SalleServices]
 })
 export class AppModule {}
