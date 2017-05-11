@@ -46,7 +46,7 @@ export class HomePage {
 
   // Fin fonction copiees
   focusOnSalle(salle) {
-    this.navCtrl.push(this.mapsPage, { salle : salle.nom });
+    this.navCtrl.push(this.mapsPage, { salle : salle });
   }
 
 

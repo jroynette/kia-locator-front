@@ -7,6 +7,9 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { MapsPage } from '../pages/maps/maps';
 import {InfoSallePage} from "../pages/infosSalle/infoSalle";
 import {SalleServices} from "../services/salle.service"
+import {EditSallePage} from '../pages/admin/editSalle/editSalle';
+import {ListSallePage} from '../pages/admin/listSalle/listSalle';
+import {SelectSitePage} from '../pages/selectSite/selectSite';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import {SalleServices} from "../services/salle.service"
     HomePage,
     TabsPage,
     MapsPage,
-    InfoSallePage
+    InfoSallePage,
+    EditSallePage,
+    ListSallePage,
+    SelectSitePage
   ],
   imports: [
     IonicModule.forRoot(MyApp, {tabsHideOnSubPages: true})
@@ -27,7 +33,11 @@ import {SalleServices} from "../services/salle.service"
     HomePage,
     TabsPage,
     InfoSallePage,
-    MapsPage
+    MapsPage,
+    InfoSallePage,
+    EditSallePage,
+    ListSallePage,
+    SelectSitePage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, SalleServices]
 })

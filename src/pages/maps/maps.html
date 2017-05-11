@@ -1,9 +1,9 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Information Salle {{ salle }}</ion-title>
+    <ion-title>Localisation Salle {{ salle }}</ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content style="background-color:#78A6C5;">
+<ion-content>
   <div>
     <img src="../../assets/img/bazaVBkqQYzvCb5YBAUH_2017-02-1611_04_11-Lys-lez-Lannoy-GoogleMaps.png"
          style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
@@ -12,4 +12,7 @@
     <img src="../../assets/img/QmqN0a7TNqf2ZLxHPhCA_salles.png"
          style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
   </div>
+
+  <button ion-button block (click)="details()">Détails</button>
+
 </ion-content>
