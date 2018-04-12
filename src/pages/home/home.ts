@@ -4,6 +4,7 @@ import {Salle} from '../../modele/salle';
 import {Carte} from '../../modele/carte';
 import {MapsPage} from '../maps/maps';
 import {NavController} from 'ionic-angular';
+import {Plan} from "../../modele/plan";
 
 @Component({
   selector: 'page-home',
@@ -13,6 +14,7 @@ export class HomePage {
 
   public salles: Salle[];
   public cartes: Carte[];
+  public plans: Plan[];
 
   mapsPage: any = MapsPage;
 
@@ -26,7 +28,14 @@ export class HomePage {
 
   // Fonctions copiees de la doc ionic
   initializeItems() {
-    this.salles = this.salleService.getListSalles();
+    // this.salles = this.salleService.getListSalles();
+    this.salleService.getPlans().subscribe((responsePlans: Plan[]) => {
+      this.salles = [];
+      this.plans = responsePlans;
+      this.plans.forEach((plan) => {
+        this.salles = this.salles.concat(plan.salles);
+      });
+    });
   }
 
   getItems(ev: any) {
